@@ -1,0 +1,162 @@
+$easeInOutQuart: cubic-bezier(0.76, 0, 0.24, 1);
+$easeOutQuad: cubic-bezier(0.5, 1, 0.89, 1);
+
+@import "./nav.scss";
+
+html,
+body
+{
+  width: 100%;
+  height: 100%;
+}
+
+
+
+.hero {
+   height: 100vh;
+   width: 100vw;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.reveal-box {
+  position: relative;
+  height: calc(100vh - 48px);
+  max-height: 380px;
+  width: calc((100vh - 48px) * 0.66);
+  max-width: 320px;
+  overflow: hidden;
+ 
+}
+
+.hero__text {
+  font-size: 50px;
+}
+
+.text1 {
+  margin-left: -30px;
+}
+.text2 {
+  margin-left: auto;
+  margin-right: -30px;
+}
+
+.hero__inner {
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+
+.reveal-box__inner{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  
+  &::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #c1b294;
+  }
+}
+
+.reveal-box__image{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.enter{
+  .reveal-box__inner{
+    animation: 0.9s $easeInOutQuart 0s both paused slide-in-right;
+    
+    &::after{
+      animation: 0.9s $easeInOutQuart 0.6s both paused slide-out-right;
+    }
+  }
+  
+  .reveal-box__image{
+    animation: 1.5s $easeInOutQuart 0.3s both paused scale-in-down;
+  }
+}
+
+.leave{
+  .reveal-box__inner{
+    animation: 0.9s $easeInOutQuart 0s both paused slide-out-right;
+    
+    &::after{
+      animation: 0.9s $easeInOutQuart 0s both paused slide-in-left;
+    }
+  }
+  
+  .reveal-box__image{
+    animation: 0.9s $easeInOutQuart 0s both paused slide-out-left;
+  }
+}
+
+.animate{
+  .reveal-box__inner{
+    animation-play-state: running;
+    
+    &::after{
+      animation-play-state: running;
+    }
+  }
+  
+  .reveal-box__image{
+    animation-play-state: running;
+  }
+}
+
+
+
+@keyframes slide-in-right {
+  0% {
+    transform: translate3D(-100%, 0, 0);
+  }
+  100% {
+    transform: translate3D(0, 0, 0);
+  }
+}
+
+@keyframes slide-out-right {
+  0% {
+    transform: translate3D(0, 0, 0);
+  }
+  100% {
+    transform: translate3D(100%, 0, 0);
+  }
+}
+
+@keyframes slide-in-left {
+  0% {
+    transform: translate3D(100%, 0, 0);
+  }
+  100% {
+    transform: translate3D(0, 0, 0);
+  }
+}
+
+@keyframes slide-out-left {
+  0% {
+    transform: translate3D(0, 0, 0);
+  }
+  100% {
+    transform: translate3D(-100%, 0, 0);
+  }
+}
+
+@keyframes scale-in-down {
+  0% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
