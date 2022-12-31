@@ -1,0 +1,233 @@
+.footer {
+  padding-top: 10vh;
+  background-color: #212121;
+  color: #fff !important;
+}
+.footer__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: -40px;
+  margin-bottom: 73px;
+}
+
+.footer__col {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 25%;
+  flex: 0 0 25%;
+  padding-right: 30px;
+}
+
+.footer__col:not(:first-child) {
+  padding-top: 8px;
+}
+
+.footer__logo {
+  display: inline-block;
+  font-size: 0;
+}
+
+.footer__pic {
+  width: 145px;
+}
+
+.footer__category {
+  margin-bottom: 50px;
+  color: #999FAE;
+}
+
+.footer__category .icon {
+  display: none;
+}
+
+.footer__col.active .footer__category {
+  border-color: #5956E9;
+  color: #5956E9;
+}
+
+.footer__col.active .footer__category .icon {
+  fill: #5956E9;
+}
+
+.footer__menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+
+.footer__link {
+  color: #fff;
+  -webkit-transition: color .25s;
+  -o-transition: color .25s;
+  transition: color .25s;
+  font-size: 22px;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+// .footer__link:hover {
+//   color: #5956E9;
+// }
+
+.footer__link:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.footer__bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 26px 0 26px;
+  // border-top: 1px solid #E3E6E9;
+}
+
+.footer__company {
+  margin-right: 16px;
+  font-size: 0;
+}
+
+.footer__copyright {
+  margin-right: auto;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+}
+
+.footer__scroll {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-left: auto;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+  -webkit-transition: opacity .25s;
+  -o-transition: opacity .25s;
+  transition: opacity .25s;
+}
+
+.footer__scroll:hover {
+  opacity: .85;
+}
+
+.footer__icon {
+  margin-right: 16px;
+  font-size: 0;
+}
+
+
+
+
+@media only screen and (min-width: 768px) {
+  .footer__menu {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+  }
+}
+
+
+
+
+
+
+@media only screen and (max-width: 1023px) {
+
+  .footer__row {
+    margin-right: -60px;
+  }
+
+}
+
+@media only screen and (max-width: 767px) {
+
+  .foot__hide {
+    display: none !important;
+  }
+  .footer__center {
+    padding: 0 82px;
+  }
+
+  .footer__row {
+    display: block;
+    margin: 0 0 32px;
+  }
+  .footer__col {
+    width: 100%;
+    margin-bottom: 32px;
+    padding: 0;
+  }
+  .footer__col:first-child {
+    margin-bottom: 56px;
+    // text-align: center;
+  }
+  .footer__col:not(:first-child) {
+    padding: 0;
+  }
+  .footer__category {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #E3E6E9;
+    margin: 0;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-transition: all .25s;
+    -o-transition: all .25s;
+    transition: all .25s;
+  }
+  .footer__category .icon {
+    display: inline-block;
+    margin-left: auto;
+    font-size: 10px;
+    fill: #999FAE;
+    -webkit-transition: fill .25s;
+    -o-transition: fill .25s;
+    transition: fill .25s;
+  }
+  .footer__menu {
+    // display: none;
+    padding-top: 24px;
+  }
+  .footer__link {
+    display: block;
+  }
+  .footer__bottom {
+    padding: 32px 0 32px;
+    border: none;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .footer__scroll {
+    margin-left: 0;
+  }
+  // .footer__scroll {
+  //   font-size: 0;
+  // }
+  .footer__icon {
+    margin: 0;
+  }
+
+}
+
+
+

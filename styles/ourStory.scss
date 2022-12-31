@@ -1,0 +1,128 @@
+.oh {
+	position: relative;
+	overflow: hidden;
+}
+
+.oh__inner {
+	will-change: transform;
+	display: inline-block;
+}
+
+.line {
+	transform-origin: 0;
+	white-space: nowrap;
+	will-change: transform;
+}
+
+.item {
+	grid-gap: 5vh;
+	grid-template-columns: 100%;
+	align-content: center;
+	justify-content: center;
+	display: grid;
+	grid-template-areas: 'caption' 'img';
+	margin: 25vh auto 20vh;
+	padding-left: 175px;
+
+}
+
+.item__image-wrap {
+	grid-area: img;
+	width: 100%;
+	aspect-ratio: 800/500;
+	justify-self: center;
+}
+
+.item__image {
+	width: 100%;
+	aspect-ratio: 800/500;
+	position: relative;
+	overflow: hidden;
+	will-change: transform;
+}
+
+.item__image-inner {
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	will-change: transform;
+}
+
+.item__caption {
+	grid-area: caption;
+	position: relative;
+	z-index: 10;
+	margin-top: -55px;
+	padding-right: 60px;
+}
+
+.item__caption-title, .rec {
+	white-space: nowrap;
+	width: min-content;
+	line-height: 1.2;
+	font-size: clamp(2rem, 6vw, 3.5rem);
+	font-weight: 300;
+	margin: 0;
+	color: var(--color-title);
+}
+
+.item__caption-description, .item__caption-description2 {
+	max-width: 300px;
+	line-height: 1.2;
+	// margin-bottom: 25px;
+	margin-top: 15px;
+}
+
+.story__cta {
+	margin-top: 15px;
+	opacity: 0;
+}
+
+.item__caption-number {
+	display: inline-block;
+}
+
+
+@media screen and (min-width: 53em) {
+
+	.item {
+		grid-gap: 1vw;
+		grid-template-columns: 35vw 1fr;
+		grid-template-areas: 'caption img';
+	}
+
+
+}
+
+
+
+
+.features__link {
+    position: relative;
+    display: inline-block;
+    color: #000;
+    -webkit-transition: all 0.25s;
+    -o-transition: all 0.25s;
+    transition: all 0.25s;
+	cursor: pointer;
+}
+.features__link:hover {
+    padding-left: 50px;
+    color: #000;
+}
+
+.features__link:hover:before {
+    width: 34px;
+}
+.features__link:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: #000;
+    -webkit-transition: width 0.25s;
+    -o-transition: width 0.25s;
+    transition: width 0.25s;
+}
