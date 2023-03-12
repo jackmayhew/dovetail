@@ -41,14 +41,14 @@ body {
   overflow: hidden;
 }
 
-.one {
+// .one {
 
-  opacity: 0;
-}
-.two {
+//   opacity: 0;
+// }
+// .two {
 
-  opacity: 0;
-}
+//   opacity: 0;
+// }
 
 .hero__titles {
   height: 450px;
@@ -155,21 +155,21 @@ body {
 
 
 // here
-// .enter {
-//   .reveal-box__inner {
+.enter {
+  .reveal-box__inner {
 
 
-//     &::after {
-//       animation: 0.9s $easeInOutQuart 0.6s both paused slide-out-right;
-//       animation-delay: 2s;
-//     }
-//   }
+    &::after {
+      animation: 0.9s $easeInOutQuart 0.6s both paused slide-out-right;
+      animation-delay: 2s;
+    }
+  }
 
-//   .reveal-box__image {
-//     animation: 1s $easeInOutQuart 0.3s both paused scale-in-down;
-//      animation-delay: 2s;
-//   }
-// }
+  .reveal-box__image {
+    animation: 1s $easeInOutQuart 0.3s both paused scale-in-down;
+     animation-delay: 2s;
+  }
+}
 
 
 

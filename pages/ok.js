@@ -33,24 +33,24 @@ function What() {
 
 
     useEffect(() => {
-        gsap.to('.one', {
-            duration: 1.25,
-            ease: 'Expo.easeOut',
-            startAt: { x: '-30%', opacity: 0 },
-            x: 0,
-            opacity: 1,
-            delay: 2.25,
-        });
-        gsap.to('.two', {
-            duration: 1.25,
-            ease: 'Expo.easeOut',
-            startAt: { x: '30%', opacity: 0 },
-            x: 0,
-            opacity: 1,
-            delay: 2.5,
+        // gsap.to('.one', {
+        //     duration: 1.25,
+        //     ease: 'Expo.easeOut',
+        //     startAt: { x: '-30%', opacity: 0 },
+        //     x: 0,
+        //     opacity: 1,
+        //     delay: 2.25,
+        // });
+        // gsap.to('.two', {
+        //     duration: 1.25,
+        //     ease: 'Expo.easeOut',
+        //     startAt: { x: '30%', opacity: 0 },
+        //     x: 0,
+        //     opacity: 1,
+        //     delay: 2.5,
 
-            // delay: pos => pos*0.06
-        });
+        //     // delay: pos => pos*0.06
+        // });
 
 
         gsap.to('.cta__top', {
