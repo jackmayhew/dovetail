@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import {IoCallOutline, IoMailOutline} from 'react-icons/io5';
+import Link from 'next/link'
 
 function Nav() {
   const [mobileMenu, setMobileMenu] = useState(false);
@@ -60,7 +61,7 @@ function Nav() {
   </div>
 </div>
 
-        <a className="header__logo" href="#"><img className="header__pic" src="/logo.png" alt="" /></a>
+        <Link className="header__logo" href="/"><img className="header__pic" src="/logo.png" alt="" /></Link>
         {/* <div className="header__wrap js-header-wrap"> */}
         <div className={mobileMenu ? "header__wrap js-header-wrap visible" : "header__wrap js-header-wrap"}>
           <nav className="header__nav">
@@ -136,7 +137,7 @@ function Nav() {
 
           <nav className="header__nav__mobile">
 
-            <a className="header__item link link--metis" href="#">Projects</a>
+            <Link className="header__item link link--metis" href="#">Projects</Link>
             <a className="header__item link link--metis" href="#">About</a>
             <a className="header__item link link--metis" href="#">Contact</a>
           </nav>
