@@ -33,24 +33,24 @@ function What() {
 
 
     useEffect(() => {
-        // gsap.to('.one', {
-        //     duration: 1.25,
-        //     ease: 'Expo.easeOut',
-        //     startAt: { x: '-30%', opacity: 0 },
-        //     x: 0,
-        //     opacity: 1,
-        //     delay: 2.25,
-        // });
-        // gsap.to('.two', {
-        //     duration: 1.25,
-        //     ease: 'Expo.easeOut',
-        //     startAt: { x: '30%', opacity: 0 },
-        //     x: 0,
-        //     opacity: 1,
-        //     delay: 2.5,
+        gsap.to('.one', {
+            duration: 1.25,
+            ease: 'Expo.easeOut',
+            startAt: { x: '-30%', opacity: 0 },
+            x: 0,
+            opacity: 1,
+            delay: 2.25,
+        });
+        gsap.to('.two', {
+            duration: 1.25,
+            ease: 'Expo.easeOut',
+            startAt: { x: '30%', opacity: 0 },
+            x: 0,
+            opacity: 1,
+            delay: 2.5,
 
-        //     // delay: pos => pos*0.06
-        // });
+            // delay: pos => pos*0.06
+        });
 
 
         gsap.to('.cta__top', {
@@ -132,10 +132,11 @@ function What() {
                             </div>
                         </div>
                         <div className="content__row content__row--text">
-                            <h2 className="content__title ">
-                                <span className="oh "><span className='one'>building your vision.</span></span><br />
+                            <div className="content__title ">
+                                <span className="oh"><span className='one'>building your vision.</span></span><br />
                                 <span className="oh"><span className='two'>building with care. </span></span>
-                            </h2>
+                            </div>
+        
                             {/* <span className="content__number"><span className="oh"><span>1</span></span></span> */}
                             {/* <button className="content__back unbutton">
                                 <svg viewBox="0 0 50 9"><path d="m0 4.5 5-3m-5 3 5 3m45-3h-77"></path></svg>
