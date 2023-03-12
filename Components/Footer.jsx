@@ -11,9 +11,9 @@ function Footer() {
               Company
             </div> */}
             <div className="footer__menu js-footer-menu">
-              <a className="footer__link" href="#">Projects </a>
-              <a className="footer__link" href="#">About</a>
-              <a className="footer__link" href="#">Contact</a>
+              <a className="footer__link foot__link link link--metis" href="#">Projects </a>
+              <a className="footer__link foot__link link link--metis" href="#">About</a>
+              <a className="footer__link foot__link link link--metis" href="#">Contact</a>
               </div>
           </div>
           <div className="footer__col js-footer-col">
@@ -21,14 +21,19 @@ function Footer() {
               Inquiries
             </div> */}
             <div className="footer__menu js-footer-menu">
-              <a className="footer__link" href="#">Inquiries </a>
-              <a className="footer__link" href="#">Careers</a>
-              <a className="footer__link" href="#">News</a>
+              <a className="footer__link foot__link link link--metis" href="#">Inquiries </a>
+              <a className="footer__link foot__link link link--metis" href="#">Careers</a>
+              <a className="footer__link foot__link link link--metis" href="#">News</a>
               </div>          
             </div>
           <div className="footer__col js-footer-col">
 
-          <a className="header__btn btn btn_white foot__hide" href="login.html">QUOTES</a>
+          {/* <a className="header__btn btn btn_white foot__hide" href="login.html">QUOTES</a> */}
+              <a href="" className='footer__career'>
+                <span className='footer__link foot__link link link--metis foot__1'>work with</span>
+                <span className='footer__link foot__link link link--metis foot__2'>dovetail</span>
+                <span className='footer__link foot__link link link--metis foot__3'>renovations</span>
+              </a>
 
             </div>
         </div>
@@ -38,7 +43,7 @@ function Footer() {
             </a> */}
           <div className="footer__copyright">© 2023 Dovetail Construction</div>
           <a className="footer__scroll js-link-scroll" href="#header">
-            <div className="footer__text">Terms and Conditions</div>
+            <span className="footer__text foot__link link link--metis">Terms and Conditions</span>
           </a>
         </div>
       </div>

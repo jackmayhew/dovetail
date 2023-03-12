@@ -31,10 +31,10 @@ function RecentWork() {
             opacity: 1,
             delay: .5,
             stagger: .25
+       
         });
+ 
 
-
-        //                   //
 
         {
             const getMousePos = (e) => {
@@ -164,18 +164,18 @@ function RecentWork() {
     }, [])
 
     return (
-        <div className='width'>
+        <div className='width homework'>
             <h2 className="item__caption-title rec"><span className="oh__insner">RECENT PROJECTS</span></h2>
             <nav className="menu" data-fx="4">
 
                 <a href='/project' className="menu__item" data-img="https://images.unsplash.com/photo-1499955085172-a104c9463ece?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80">
                     {/* <span className="menu__item-text"><span className="menu__item-textinner">Brian <i>Just</i></span></span> */}
-                    <span className="menu__item-text"><span className="menu__item-textinner">Devito</span></span>
+                    <span className="menu__item-text"><span className="menu__item-textinner">Church St</span></span>
                     <span className="menu__item-sub">View</span>
                 </a>
 
                 <a href='/project' className="menu__item" data-img="https://images.unsplash.com/photo-1499955085172-a104c9463ece?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80">
-                    <span className="menu__item-text"><span className="menu__item-textinner">Church St</span></span>
+                    <span className="menu__item-text"><span className="menu__item-textinner">Glengarry</span></span>
                     <span className="menu__item-sub">View</span>
                 </a>
                 <a href='/project' className="menu__item" data-img="https://images.unsplash.com/photo-1499955085172-a104c9463ece?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80">

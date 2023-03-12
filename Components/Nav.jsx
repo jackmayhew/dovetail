@@ -1,11 +1,16 @@
 import React from 'react'
 import { FiPhone, FiMail, FiChevronDown } from 'react-icons/fi';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+import {IoCallOutline, IoMailOutline} from 'react-icons/io5';
 
 function Nav() {
-
+  const [mobileMenu, setMobileMenu] = useState(false);
+  const handleMobileMenu = () => {
+    setMobileMenu(!mobileMenu);
+  };
+  
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
     const showAnim = gsap.from('.header', {
@@ -21,17 +26,49 @@ function Nav() {
         self.direction === -1 ? showAnim.play() : showAnim.reverse()
       }
     });
+
+
+
+
+//     let hamburger = document.querySelector('.hamburger');
+
+// hamburger.addEventListener('click', () => {
+//   hamburger.classList.toggle('active');
+//   if (hamburger.classList.contains('active')) {
+//     hamburger.classList.toggle('active');
+//   } else {
+//     hamburger.classList.add('active');
+//   }
+//   console.log(hamburger.classList);
+// });
+
   }, [])
   return (
     <div className="header js-header" id="header">
-      <div className="header__center center"><button className="header__burger js-header-burger"><span></span></button>
+      <div className="header__center centerr">
+        {/* <button className="header__burger js-header-burger"><span></span></button> */}
+        <div className={
+            mobileMenu
+              ? "hamburger active"
+              : "hamburger"
+          }
+        
+        onClick={() => handleMobileMenu()}>
+  <div className="hamburger-container">
+    <div className="hamburger-line"></div>
+    <div className="hamburger-line"></div>
+  </div>
+</div>
+
         <a className="header__logo" href="#"><img className="header__pic" src="/logo.png" alt="" /></a>
-        <div className="header__wrap js-header-wrap">
+        {/* <div className="header__wrap js-header-wrap"> */}
+        <div className={mobileMenu ? "header__wrap js-header-wrap visible" : "header__wrap js-header-wrap"}>
           <nav className="header__nav">
             <a className="header__item link link--metis" href="#">Projects</a>
             <a className="header__item link link--metis" href="#">About</a>
             <a className="header__item link link--metis" href="#">Contact</a>
-            <a className="header__item link link--metis" href="#">Inquiries</a>
+
+            {/* <a className="header__item link link--metis" href="#">Inquiries</a> */}
             {/* <div className="header__item js-header-item">
               <a className="header__head js-header-head" href="#">Inquiries <FiChevronDown size={16} className="icon icon-arrow-down" /></a>
               <div className="header__body js-header-body">
@@ -96,14 +133,21 @@ function Nav() {
               </div>
             </div> */}
           </nav>
-          <div className="header__photo"><img className="header__pic" src="img/menu-pic.png" alt="" /></div>
+
+          <nav className="header__nav__mobile">
+
+            <a className="header__item link link--metis" href="#">Projects</a>
+            <a className="header__item link link--metis" href="#">About</a>
+            <a className="header__item link link--metis" href="#">Contact</a>
+          </nav>
+          <div className="header__photo"><img className="header__pic" src="logos.png" alt="" /></div>
         </div>
 
 
         <div className='nav__ctas'>
-          <a href="" className='nav__icon'><FiPhone size={22} /></a>
-          <a href="" className='nav__icon'><FiMail size={22} /></a>
-          <a className="header__btn btn btn_pink" href="login.html">QUOTES</a>
+          <a href="" className='nav__icon'><IoCallOutline size={22}  /></a>
+          <a href="" className='nav__icon'><IoMailOutline size={22}  /></a>
+          {/* <a className="header__btn btn btn_pink" href="login.html">QUOTES</a> */}
           <a href="" className='link link--metis'>Fr</a>
         </div>
 

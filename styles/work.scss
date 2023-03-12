@@ -207,6 +207,10 @@ a.frame__demo--current {
 	}
 }
 
+
+
+
+
 @media (any-pointer: fine) {
 	.cursor {
 		position: fixed;
@@ -314,4 +318,26 @@ html.has-scroll-dragging {
 
 .rec {
 	margin-bottom: 15px;
+}
+
+
+.poo {
+	color: red !important;
+	background-color: red !important;
+}
+
+.homework {
+	margin-bottom: 20vh;
+}
+
+
+@media screen and (max-width: 53em) {
+	.menu__item-text {
+
+		font-size: clamp(2rem, 11vw, 6rem);
+	}
+	.homework {
+		margin-bottom: 10vh;
+	}
+
 }
