@@ -9,7 +9,7 @@ import gsap from "gsap";
 import { CSSRulePlugin } from "gsap/dist/CSSRulePlugin";
 
 
-function ok() {
+function Ok() {
 
     //     useEffect(() => {
 
@@ -191,4 +191,4 @@ function ok() {
     )
 }
 
-export default ok
+export default Ok
