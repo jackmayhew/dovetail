@@ -9,7 +9,7 @@ import gsap from "gsap";
 import { CSSRulePlugin } from "gsap/dist/CSSRulePlugin";
 
 
-function Ok() {
+function What() {
 
     //     useEffect(() => {
 
@@ -76,11 +76,11 @@ function Ok() {
         });
 
 
-          TweenMax.to(".wrapper__loader", 2, {
-            right: "-100%",
-            ease: Expo.easeInOut,
-            delay: 1
-        });
+        // TweenMax.to(".wrapper__loader", 2, {
+        //     right: "-100%",
+        //     ease: Expo.easeInOut,
+        //     delay: 1
+        // });
 
         // var tl = new TimelineMax();
 
@@ -105,9 +105,9 @@ function Ok() {
     return (
         <div>
 
-            <div className="wrapper__loader">
-                {/* <div className="loader"></div> */}
-            </div>
+            {/* <div className="wrapper__loader">
+
+            </div> */}
 
             <Nav />
             <main>
@@ -191,4 +191,4 @@ function Ok() {
     )
 }
 
-export default Ok
+export default What
